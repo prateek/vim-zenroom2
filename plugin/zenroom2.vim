@@ -63,9 +63,6 @@ function! s:markdown_room()
 endfunction
 
 function! g:zenroom_goyo_before()
-    if !has("gui_running")
-        return
-    endif
     let is_mark_or_rst = &filetype == "markdown" || &filetype == "rst" || &filetype == "text"
 
     if is_mark_or_rst
@@ -74,9 +71,6 @@ function! g:zenroom_goyo_before()
 endfunction
 
 function! g:zenroom_goyo_after()
-    if !has("gui_running")
-        return
-    endif
     let is_mark_or_rst = &filetype == "markdown" || &filetype == "rst" || &filetype == "text"
     if is_mark_or_rst
         set linespace=0
